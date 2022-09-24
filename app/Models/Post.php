@@ -42,15 +42,5 @@ class Post
     public static function find(string $slug)
     {
         return static::all()->firstWhere('slug', $slug);
-
-//        $path = resource_path("posts/$slug.html");
-//
-//        if (!file_exists($path)) {
-//            throw new ModelNotFoundException();
-//            // return redirect('/');
-//            // // abort(404);
-//        }
-//
-//        return cache()->remember("posts.$slug", 5, fn() => file_get_contents($path));
     }
 }
