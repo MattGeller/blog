@@ -1,4 +1,4 @@
-<x-layout content="Hello there">
+<x-layout>
     @foreach ($posts as $post)
         <article>
             <h1>
