@@ -5,5 +5,5 @@
 {{-- <script src="/app.js"></script> --}}
 
 <body>
-{{ $content }}
+{{ $slot }}
 </body>
