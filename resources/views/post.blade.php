@@ -5,9 +5,7 @@
         </h1>
 
         <div>
-            <p>
-                {!! $post->body !!}
-            </p>
+            {!! $post->body !!}
         </div>
     </article>
 
