@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'hobbies'
         ]);
 
+        //TODO: Use factories even for these
         Post::create([
             'user_id' => $user->id,
             'category_id' => $personalCategory->id,
@@ -60,6 +61,12 @@ class DatabaseSeeder extends Seeder
             'slug' => 'my-hobby-post',
             'excerpt' => 'Second post quick text.',
             'body' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        ]);
+
+        Post::factory()->create();
+
+        Post::factory(5)->create([
+            'user_id' => $user->id
         ]);
     }
 }
