@@ -4,9 +4,7 @@
             {{ $post->title }}
         </h1>
 
-        <p>
-            By <a href="#">{{ $post->author->name }}</a> in <a href="/categories/{{$post->category->slug}}">{{ $post->category->name }}</a>
-        </p>
+        <x-author-and-category :post="$post"></x-author-and-category>
 
         <div>
             {!! $post->body !!}

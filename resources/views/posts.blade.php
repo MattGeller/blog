@@ -7,9 +7,7 @@
                 </a>
             </h1>
 
-            <p>
-                <a href="/categories/{{$post->category->slug}}">{{ $post->category->name }}</a>
-            </p>
+            <x-author-and-category :post="$post"></x-author-and-category>
 
             <div>
                 {{ $post->excerpt }}
